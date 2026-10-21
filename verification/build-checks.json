@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-21 Asia/Seoul",
+  "a4_portrait_pages": 5,
+  "content_parity": "PASS",
+  "internal_links": "PASS",
+  "evidence_links": [
+    {
+      "url": "https://github.com/NomaDamas/k-skill/pull/675",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/NomaDamas/k-skill/pull/682",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/NomaDamas/k-skill/pull/683",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/NomaDamas/k-skill/pull/684",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/NomaDamas/k-skill/pull/685",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/agentic-research-pipeline",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/README.md",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/archive/v3.0/celltrion-20260703.html",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/archive/v3.0/doosan-enerbility-20260703.html",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/global-etf-regime-allocation",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/korean-macro-factor-allocation",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/korean-macro-factor-allocation/blob/main/docs/data.md",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/korean-macro-factor-allocation/blob/main/docs/followup.md",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/korean-macro-factor-allocation/blob/main/results/followup/figures/long_nav.png",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/korean-macro-factor-allocation/blob/main/results/followup/summary.csv",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/multi-asset-morning-briefing",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/multi-asset-morning-briefing/blob/main/README.md",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/us-robust-live-ops",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/us-robust-live-ops/blob/main/docs/audit_fixes.md",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/us-robust-live-ops/blob/main/ops/ops_excel_write.py",
+      "ok": true
+    },
+    {
+      "url": "https://github.com/bucheoncityboy/us-robust-live-ops/blob/main/ops/ops_execute_gates.py",
+      "ok": true
+    }
+  ]
+}

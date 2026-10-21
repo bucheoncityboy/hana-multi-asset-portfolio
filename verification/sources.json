@@ -1,0 +1,148 @@
+{
+  "igis-hedge-fund-portfolio": {
+    "url": "https://github.com/bucheoncityboy/igis-hedge-fund-portfolio",
+    "commit": "0d894e9b650648efddd7319aa5d8ed4db2d71992"
+  },
+  "korean-macro-factor-allocation": {
+    "url": "https://github.com/bucheoncityboy/korean-macro-factor-allocation",
+    "commit": "7b7851bd5c2fae1bcca156a739474a7f9b83d8be"
+  },
+  "global-etf-regime-allocation": {
+    "url": "https://github.com/bucheoncityboy/global-etf-regime-allocation",
+    "commit": "596ab33e7264eeaaac4eb68648687767654b9b00"
+  },
+  "multi-asset-morning-briefing": {
+    "url": "https://github.com/bucheoncityboy/multi-asset-morning-briefing",
+    "commit": "4957d4e28abf15446ea0f549cd969a31c80b7f25"
+  },
+  "us-robust-live-ops": {
+    "url": "https://github.com/bucheoncityboy/us-robust-live-ops",
+    "commit": "8e2163a0960d81a3284d8451d86729c65033559a"
+  },
+  "agentic-research-pipeline": {
+    "url": "https://github.com/bucheoncityboy/agentic-research-pipeline",
+    "commit": "c0bd054cb05098a18b50a76f371dcbe732496e88"
+  },
+  "F141": {
+    "source": "results/followup/summary.csv",
+    "filter": {
+      "cohort": "long",
+      "policy": "primary",
+      "cost_bp": 5,
+      "months": 141
+    },
+    "rows": [
+      {
+        "strategy": "asset2_logistic",
+        "cost_bp": "5",
+        "months": "141",
+        "annual_cer": "0.021053844499939554",
+        "cagr": "0.03092706915808563",
+        "annual_volatility": "0.06864529097661358",
+        "sharpe": "0.24406417900638502",
+        "max_drawdown": "-0.15148255392795007",
+        "annual_turnover_two_leg": "21.168214644651457",
+        "average_risk_exposure": "0.753906416295443",
+        "annual_cost_fraction": "0.01058543637316206",
+        "daily_sharpe": "0.2382848125026592",
+        "cohort": "long",
+        "policy": "primary",
+        "average_closing_risk_exposure": "0.7539087975148103"
+      },
+      {
+        "strategy": "asset2_xgb",
+        "cost_bp": "5",
+        "months": "141",
+        "annual_cer": "0.026886278454839534",
+        "cagr": "0.035318643627005875",
+        "annual_volatility": "0.0626631552954663",
+        "sharpe": "0.3302710866551134",
+        "max_drawdown": "-0.13853792785632857",
+        "annual_turnover_two_leg": "19.479699799441665",
+        "average_risk_exposure": "0.734408678458341",
+        "annual_cost_fraction": "0.00974177612537653",
+        "daily_sharpe": "0.3232772476117685",
+        "cohort": "long",
+        "policy": "primary",
+        "average_closing_risk_exposure": "0.7344143972429298"
+      },
+      {
+        "strategy": "economic4_logistic",
+        "cost_bp": "5",
+        "months": "141",
+        "annual_cer": "0.06624288404738415",
+        "cagr": "0.07597875497320672",
+        "annual_volatility": "0.06000989298493383",
+        "sharpe": "0.9927259846966058",
+        "max_drawdown": "-0.13204800378645032",
+        "annual_turnover_two_leg": "2.480137063429118",
+        "average_risk_exposure": "0.7809249541642894",
+        "annual_cost_fraction": "0.001240617758134757",
+        "daily_sharpe": "0.9863877564630777",
+        "cohort": "long",
+        "policy": "primary",
+        "average_closing_risk_exposure": "0.7809484127270052"
+      },
+      {
+        "strategy": "economic4_xgb",
+        "cost_bp": "5",
+        "months": "141",
+        "annual_cer": "0.0589518465204738",
+        "cagr": "0.06809581319308244",
+        "annual_volatility": "0.0595721641793783",
+        "sharpe": "0.8760398531972388",
+        "max_drawdown": "-0.1326287944039981",
+        "annual_turnover_two_leg": "1.726621189565961",
+        "average_risk_exposure": "0.7650836998953433",
+        "annual_cost_fraction": "0.0008639018310322458",
+        "daily_sharpe": "0.8809916908392534",
+        "cohort": "long",
+        "policy": "primary",
+        "average_closing_risk_exposure": "0.7651077503178856"
+      }
+    ]
+  },
+  "pull_requests": [
+    {
+      "number": 675,
+      "title": "feat: 멀티에셋 모닝 브리핑 스킬 추가 (#674)",
+      "html_url": "https://github.com/NomaDamas/k-skill/pull/675",
+      "merged_at": "2026-09-19T07:04:50Z"
+    },
+    {
+      "number": 682,
+      "title": "기업분석 스킬: 공개 공시 기반 6개 섹션 채팅 분석",
+      "html_url": "https://github.com/NomaDamas/k-skill/pull/682",
+      "merged_at": "2026-09-30T09:29:40Z"
+    },
+    {
+      "number": 683,
+      "title": "feat: 한·미 국채시장 분석 스킬 추가",
+      "html_url": "https://github.com/NomaDamas/k-skill/pull/683",
+      "merged_at": "2026-09-30T09:46:08Z"
+    },
+    {
+      "number": 684,
+      "title": "시장 이벤트 리서치 스킬 추가",
+      "html_url": "https://github.com/NomaDamas/k-skill/pull/684",
+      "merged_at": "2026-09-30T09:55:59Z"
+    },
+    {
+      "number": 685,
+      "title": "한국 채권 종목 조회·비교 스킬 추가",
+      "html_url": "https://github.com/NomaDamas/k-skill/pull/685",
+      "merged_at": "2026-09-30T10:02:47Z"
+    }
+  ],
+  "workbook_sheets": [
+    "00_Config_Log",
+    "01_Portfolio_Now",
+    "02_Screen_Select",
+    "03_Results",
+    "04_Health",
+    "05_Trade"
+  ],
+  "workbook_scope": "Committed template has 6 sheets; current writer adds 06_Weekly_Trend for 7-sheet output. Code path inspected; not executed.",
+  "checked_at": "2026-10-21 Asia/Seoul",
+  "research_rerun": false
+}
