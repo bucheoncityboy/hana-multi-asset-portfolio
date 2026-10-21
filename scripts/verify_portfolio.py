@@ -54,6 +54,20 @@ for part in h.sheetparts:
     if s in [p['navTitle'] for p in data['projects']]+['프로필 및 핵심 역량']:continue
     assert norm(s) in norm(pdf_text),('missing in PDF',s)
 report={'date':'2026-10-22 Asia/Seoul','a4_portrait_pages':5,'content_parity':'PASS','internal_links':'PASS'}
+report_manifest=root/'verification/report-links.json'
+if report_manifest.is_file():
+    import hashlib
+    reports=json.loads(report_manifest.read_text(encoding='utf-8'))['reports']
+    annotations=[a.get_object().get('/A',{}).get('/URI') for page in pdf.pages for a in page.get('/Annots',[])]
+    for item in reports:
+        path=root/item['local_file']
+        assert path.is_file() and path.read_bytes().startswith(b'%PDF-')
+        assert len(PdfReader(path).pages)==item['pages']
+        assert hashlib.sha256(path.read_bytes()).hexdigest()==item['sha256']
+        assert item['url'] in h.links and item['url'] in md and item['url'] in annotations
+    assert not any('/blob/' in str(uri) and str(uri).endswith('.html') for uri in annotations)
+    report['readable_report_pdf_links']='PASS'
+    report['report_pdf_count']=len(reports)
 if args.links:
     def check(url):
         parts=url.removeprefix('https://github.com/').split('/')

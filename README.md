@@ -7,6 +7,8 @@
 - Markdown: [웹과 같은 콘텐츠](hana_multi_asset_portfolio.md)
 - 검증 근거: [출처·확인 범위](verification/source-notes.md), [소스 커밋·F141 CSV 대조·PR 병합 기록](verification/sources.json), [최종 증빙 대조 결과](verification/final-audit.json)
 
+기업분석 페이지의 두 보고서 링크는 `docs/reports/`에 보관한 공개 구버전 PDF로 바로 연결합니다. GitHub의 HTML 소스 화면을 보고서 열람 링크로 사용하지 않습니다. 원본과 동일한 파일이며 출처·SHA-256은 `verification/report-links.json`에 기록합니다.
+
 ## 구성
 
 1. 프로필 및 핵심 역량

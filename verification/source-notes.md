@@ -43,6 +43,8 @@ K-Skill PR [675](https://github.com/NomaDamas/k-skill/pull/675), [682](https://g
 
 [두산에너빌리티](https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/archive/v3.0/doosan-enerbility-20260703.html)와 [셀트리온](https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/archive/v3.0/celltrion-20260703.html)은 문서에 `GJC Pipeline v3.0 / 2026-07-03`이 표시되어 있고, [2026.07.10 최초 공개 커밋](https://github.com/bucheoncityboy/agentic-research-pipeline/tree/ec409eb60d65d8e7e67ac48f2b220c0c7d0f8529/examples)에 존재한다. 7월 3일은 문서 표기일이며 생성 프로그램의 독립 실행 시각을 입증하는 로그는 아니다. 현재 계약으로 재검증되지 않은 v3.0 기록이라는 설명을 유지하고 본문에 날짜·버전을 추가했다. 현재 가상 예제는 실제 분석 근거로 사용하지 않았다.
 
+보고서 열람 링크를 GitHub HTML 소스 화면으로 연결했던 문제를 수정했다. 같은 공개 저장소의 기존 PDF 두 개를 `docs/reports/`에 바이트 변경 없이 보관하고, 웹·Markdown·포트폴리오 PDF의 링크를 GitHub Pages의 해당 PDF URL로 변경했다. 위 GitHub HTML 링크는 이 검증 문서에서 원문 소스 출처를 확인하는 용도로만 유지한다. 링크 대상·원본 SHA-256·페이지 수는 `report-links.json`에 기록했다.
+
 ## 기존 디자인에서 바꾼 부분
 
 기존 `content.json → build.py → docs/HTML·Markdown` 구조, 흰 배경·절제된 색상·목차·프로필 표·프로젝트 2열·명시적 인쇄 페이지 나눔을 재사용했다. 포인트 색상은 짙은 청록색으로 조정했다. 국내 주식 VFS 페이지를 제외하고 ETF 연구를 가장 앞에 배치했다. 나머지는 브리핑→운용 시스템→기업분석 순서다. 지원 조직과 영문 부제를 바꾸고 웹과 같은 HTML에서 PDF를 생성하는 스크립트를 추가했다. 기존 원격 저장소와 로컬 원본 파일은 수정하지 않았다.

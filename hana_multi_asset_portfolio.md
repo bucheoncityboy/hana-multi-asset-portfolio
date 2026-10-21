@@ -245,6 +245,6 @@ CER: 수익과 위험을 함께 반영한 지표. 월 순수익·위험회피계
 
 - [GitHub 저장소](https://github.com/bucheoncityboy/agentic-research-pipeline)
 - [현재 스킬과 검증 절차](https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/README.md)
-- [두산에너빌리티 보고서](https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/archive/v3.0/doosan-enerbility-20260703.html)
-- [셀트리온 보고서](https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/archive/v3.0/celltrion-20260703.html)
+- [두산에너빌리티 보고서](https://bucheoncityboy.github.io/hana-multi-asset-portfolio/reports/doosan-enerbility-20260703.pdf)
+- [셀트리온 보고서](https://bucheoncityboy.github.io/hana-multi-asset-portfolio/reports/celltrion-20260703.pdf)
 

@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-22 Asia/Seoul",
+  "reason": "Report links must open readable PDFs, not GitHub HTML source views.",
+  "reports": [
+    {
+      "label": "두산에너빌리티 보고서",
+      "url": "https://bucheoncityboy.github.io/hana-multi-asset-portfolio/reports/doosan-enerbility-20260703.pdf",
+      "local_file": "docs/reports/doosan-enerbility-20260703.pdf",
+      "source": "https://github.com/bucheoncityboy/agentic-research-pipeline/blob/c0bd054cb05098a18b50a76f371dcbe732496e88/archive/v3.0/doosan-enerbility-20260703.pdf",
+      "sha256": "9854962839049c635c03e9d50be12ab4c0a30b1615a3a96060e4d113da15b34d",
+      "pages": 14,
+      "source_bytes_unchanged": true
+    },
+    {
+      "label": "셀트리온 보고서",
+      "url": "https://bucheoncityboy.github.io/hana-multi-asset-portfolio/reports/celltrion-20260703.pdf",
+      "local_file": "docs/reports/celltrion-20260703.pdf",
+      "source": "https://github.com/bucheoncityboy/agentic-research-pipeline/blob/c0bd054cb05098a18b50a76f371dcbe732496e88/archive/v3.0/celltrion-20260703.pdf",
+      "sha256": "742e0e580f29c0fb09943e578245d7ae90205597ff850658c2a6891bad9240b4",
+      "pages": 13,
+      "source_bytes_unchanged": true
+    }
+  ]
+}

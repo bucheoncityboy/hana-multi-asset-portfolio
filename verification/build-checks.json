@@ -3,6 +3,8 @@
   "a4_portrait_pages": 5,
   "content_parity": "PASS",
   "internal_links": "PASS",
+  "readable_report_pdf_links": "PASS",
+  "report_pdf_count": 2,
   "evidence_links": [
     {
       "url": "https://github.com/NomaDamas/k-skill/pull/675",
@@ -30,14 +32,6 @@
     },
     {
       "url": "https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/README.md",
-      "ok": true
-    },
-    {
-      "url": "https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/archive/v3.0/celltrion-20260703.html",
-      "ok": true
-    },
-    {
-      "url": "https://github.com/bucheoncityboy/agentic-research-pipeline/blob/main/archive/v3.0/doosan-enerbility-20260703.html",
       "ok": true
     },
     {
