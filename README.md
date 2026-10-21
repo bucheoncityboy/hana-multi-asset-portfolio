@@ -5,7 +5,7 @@
 - 웹: https://bucheoncityboy.github.io/hana-multi-asset-portfolio/
 - PDF: [A4 세로 5페이지](docs/hana_multi_asset_portfolio.pdf)
 - Markdown: [웹과 같은 콘텐츠](hana_multi_asset_portfolio.md)
-- 검증 근거: [출처·확인 범위](verification/source-notes.md), [소스 커밋·F141 CSV 대조·PR 병합 기록](verification/sources.json)
+- 검증 근거: [출처·확인 범위](verification/source-notes.md), [소스 커밋·F141 CSV 대조·PR 병합 기록](verification/sources.json), [최종 증빙 대조 결과](verification/final-audit.json)
 
 ## 구성
 
@@ -54,8 +54,10 @@ git push origin main
 
 ## 사실관계와 한계
 
-F141은 `korean-macro-factor-allocation`의 `long / primary / cost_bp=5` 결과를 사용합니다. 별도 `global-etf-regime-allocation`의 12 ETF·117개월 수치는 사용하지 않습니다. CER는 위험을 반영한 지표이며 연 수익률과 구분합니다. 로지스틱 대비 XGBoost의 통계적 우위는 확인되지 않았습니다.
+F141은 `korean-macro-factor-allocation`의 `long / primary / cost_bp=5` 결과를 사용합니다. 별도 `global-etf-regime-allocation`의 12 ETF·117개월 수치는 사용하지 않습니다. CER는 위험을 반영한 지표이며 연 수익률·CAGR와 구분합니다. 로지스틱 대비 XGBoost의 통계적 우위는 확인되지 않았습니다. 같은 F141 평가 기준에서 국면 없는 평균분산의 연 CER는 4.69%, SPY/IEF 60/40은 7.00%로, 국면 예측 전략이 모든 비교군을 앞선 것은 아닙니다.
 
-브리핑 시간 단축은 학회원 피드백으로 통제 실험이 아닙니다. 개인 프로젝트를 기관 펀드 운용 경험으로 표현하지 않습니다. 매수·매도 각 29건과 실계좌 수익률, 현재 기업분석 스킬의 19종목 지원은 검증된 성과에서 제외했습니다. 공개 실제 기업보고서는 구버전 작업 기록이며 현재 가상 예제와 구분합니다.
+브리핑 시간 단축은 학회원 피드백으로 통제 실험이 아닙니다. 개인 프로젝트를 기관 펀드 운용 경험으로 표현하지 않습니다. 로컬 실행 로그의 매수 29건·매도 1건은 Excel 실행결과표의 상태·수량·평균가·주문 식별자와 일치했습니다. 이는 같은 애플리케이션 내부 기록의 대조이며 브로커 원본에 따른 실제 체결의 독립 검증은 아닙니다. 매도 29건과 실계좌 수익률은 확인되지 않았습니다. 계좌번호·주문 식별자·실제 거래내역 원본은 공개하지 않습니다.
+
+기업분석 v3.0의 2026.08.31 README에는 19개 종목의 커버리지 목록이 있습니다. 다만 19개 지원 구현이나 19개 전체의 분석 완료를 검증한 자료와 구분해, 포트폴리오에 지원 수치를 복원하지 않았습니다. 두산에너빌리티·셀트리온 샘플의 문서 표기일은 2026.07.03이고 v3.0 자료입니다. 현재 v3.2 스킬의 가상 실행 예제와 구분합니다.
 
 원 연구를 재학습하거나 운용 시스템의 실제 주문을 실행하지 않았습니다. 검증은 저장소 자료·코드·산출물의 대조와 이번 포트폴리오의 빌드·출력·링크 확인을 대상으로 합니다.

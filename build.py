@@ -40,7 +40,7 @@ profile_page = f'''<section class="profile sheet" id="overview" aria-labelledby=
   <section class="profile-block education">{section_title('01', '학력')}<div class="table-scroll"><table class="profile-table education-table"><caption class="sr-only">학력</caption><colgroup><col class="school-col"><col class="major-col"><col class="period-col"><col class="status-col"></colgroup><thead><tr><th scope="col">학교</th><th scope="col">전공</th><th scope="col">기간</th><th scope="col">비고</th></tr></thead><tbody>{education_rows}</tbody></table></div></section>
   <section class="profile-block activities">{section_title('02', '교내 활동')}{activity_rows}</section>
   <section class="profile-block credentials">{section_title('03', '자격증 및 수료')}<div class="table-scroll"><table class="profile-table credentials-table"><caption class="sr-only">자격증 및 수료 내역</caption><colgroup><col class="type-col"><col><col class="date-col"></colgroup><thead><tr><th scope="col">구분</th><th scope="col">내용</th><th scope="col">취득일</th></tr></thead><tbody>{credential_rows}</tbody></table></div></section>
-  <section class="profile-block experience">{section_title('04', '실무 경험')}<div class="experience-row"><header class="profile-row-heading"><h3>{esc(experience['name'])}</h3><p class="period">{esc(experience['period'])}</p></header><p class="experience-details"><span>{esc(experience['items'][0])} / {esc(experience['items'][1])}</span><strong>{esc(experience['items'][2])}</strong></p></div></section>
+  <section class="profile-block experience">{section_title('04', '경력')}<div class="experience-row"><header class="profile-row-heading"><h3>{esc(experience['name'])}</h3><p class="period">{esc(experience['period'])}</p></header><p class="experience-details"><span>{esc(' / '.join(experience['items']))}</span></p></div></section>
   <section class="profile-block core-skills">{section_title('05', '핵심 역량')}<ul class="skill-list">{''.join(f'<li>{esc(x)}</li>' for x in PROFILE['competencies'])}</ul></section>
   <p class="print-folio">김재원 · 하나자산운용 멀티에셋솔루션팀 지원 포트폴리오 <span>01 / 05</span></p>
 </section>'''
@@ -67,7 +67,7 @@ for p in DATA['projects']:
 document = f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#006f6b"><title>김재원 | 하나자산운용 지원 포트폴리오</title><meta name="description" content="글로벌 ETF 자산배분, 시장 브리핑, 미국 대형주 운용자료 관리와 기업 리서치 지원 경험을 정리한 김재원의 포트폴리오입니다."><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css?v={CSS_VERSION}"><script src="app.js?v={JS_VERSION}" defer></script></head>
 <body><a class="skip-link" href="#main">본문으로 이동</a><div class="reading-progress" aria-hidden="true"></div>
-<aside class="sidebar"><a href="#overview" class="identity"><span class="identity-label">지원 포트폴리오</span><strong>김재원<span class="identity-dot">.</span></strong><span class="identity-en">JAEWON KIM</span></a><nav aria-label="포트폴리오 목차">{nav}</nav><div class="sidebar-bottom"><p>GLOBAL MULTI-ASSET<br>RESEARCH &amp; OPERATIONS</p><div class="download-links"><a href="hana_multi_asset_portfolio.pdf" download>PDF 내려받기 ↓</a><a href="hana_multi_asset_portfolio.md" download>Markdown 원본 ↓</a></div></div></aside>
+<aside class="sidebar"><a href="#overview" class="identity"><span class="identity-label">하나자산운용 지원</span><strong>PORTFOLIO</strong></a><nav aria-label="포트폴리오 목차">{nav}</nav><div class="sidebar-bottom"><p>GLOBAL MULTI-ASSET<br>RESEARCH &amp; OPERATIONS</p><div class="download-links"><a href="hana_multi_asset_portfolio.pdf" download>PDF 내려받기 ↓</a><a href="hana_multi_asset_portfolio.md" download>Markdown 원본 ↓</a></div></div></aside>
 <main id="main">{profile_page}
 {''.join(projects)}<footer class="site-footer"><span>김재원 · 지원 포트폴리오</span><a href="hana_multi_asset_portfolio.pdf" download>PDF 내려받기 ↓</a><a href="#overview">처음으로 ↑</a></footer></main></body></html>'''
 (OUT / 'index.html').write_text(document,encoding='utf-8')
@@ -82,7 +82,7 @@ for a in PROFILE['activities']:
     md += f'### {a["name"]} | {a["period"]}\n\n' + '\n'.join('- '+x for x in a['items']) + '\n\n'
 md += '## 03. 자격증 및 수료\n\n| 구분 | 내용 | 취득일 |\n| --- | --- | --- |\n'
 md += ''.join(f'| {c["type"]} | {c["name"]} | {c["date"]} |\n' for c in PROFILE['credentials'])
-md += f'\n## 04. 실무 경험\n\n**{experience["name"]} | {experience["period"]}**\n\n' + '\n'.join('- '+x for x in experience['items'])
+md += f'\n## 04. 경력\n\n**{experience["name"]} | {experience["period"]}**\n\n' + '\n'.join('- '+x for x in experience['items'])
 md += '\n\n## 05. 핵심 역량\n\n' + '\n'.join('- '+x for x in PROFILE['competencies'])+'\n\n'
 for p in DATA['projects']:
     md += f'---\n\n## [{int(p["number"])}. {p["title"]}]\n\n**프로젝트: {p["subtitle"]}**\n\n### 프로젝트 개요\n\n'

@@ -53,7 +53,7 @@ for part in h.sheetparts:
     # Navigation labels are shorter alternatives; download controls are screen-only.
     if s in [p['navTitle'] for p in data['projects']]+['프로필 및 핵심 역량']:continue
     assert norm(s) in norm(pdf_text),('missing in PDF',s)
-report={'date':'2026-10-21 Asia/Seoul','a4_portrait_pages':5,'content_parity':'PASS','internal_links':'PASS'}
+report={'date':'2026-10-22 Asia/Seoul','a4_portrait_pages':5,'content_parity':'PASS','internal_links':'PASS'}
 if args.links:
     def check(url):
         parts=url.removeprefix('https://github.com/').split('/')

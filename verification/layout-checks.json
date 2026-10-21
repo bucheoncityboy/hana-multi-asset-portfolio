@@ -1,13 +1,35 @@
 {
-  "checked_at": "2026-10-21 Asia/Seoul",
-  "browser": "Codex in-app browser",
-  "responsive_frames": [
-    {"frame_width_px": 1440, "content_width_px": 1425, "scroll_width_px": 1425, "main_overflow_elements": 0},
-    {"frame_width_px": 390, "content_width_px": 375, "scroll_width_px": 375, "main_overflow_elements": 0},
-    {"frame_width_px": 320, "content_width_px": 305, "scroll_width_px": 305, "main_overflow_elements": 0}
+  "checked_at": "2026-10-22 Asia/Seoul",
+  "browser": "Codex in-app browser with viewport override",
+  "responsive_viewports": [
+    {
+      "requested_width_px": 1440,
+      "content_width_px": 1425,
+      "scroll_width_px": 1425,
+      "main_overflow_elements": 0
+    },
+    {
+      "requested_width_px": 390,
+      "content_width_px": 375,
+      "scroll_width_px": 375,
+      "main_overflow_elements": 0
+    },
+    {
+      "requested_width_px": 320,
+      "content_width_px": 305,
+      "scroll_width_px": 305,
+      "main_overflow_elements": 0
+    }
   ],
-  "measurement_scope": "All main-content elements across all five sections. Scrollbar accounts for 15 px width difference. Navigation has intentional horizontal scrolling on mobile.",
-  "visual_review": "Profile and mobile ETF view checked in browser; all five final PDF pages rendered with Poppler and visually reviewed.",
-  "pdf": {"pages": 5, "orientation": "portrait", "size": "A4", "korean_fonts_embedded": true},
-  "limitations": "System fonts and browser print engines can change line breaks. PDF must be regenerated and checked after content or style edits."
+  "measurement_scope": "All main-content elements across all 5 sections; 15px scrollbar. Mobile navigation intentionally scrolls horizontally.",
+  "navigation": "Desktop operations anchor and active navigation state confirmed.",
+  "pdf": {
+    "pages": 5,
+    "orientation": "portrait",
+    "size": "A4",
+    "korean_fonts_embedded": true,
+    "all_pages_visually_reviewed": true
+  },
+  "visual_review": "Final PDF rendered with Poppler. All 5 pages reviewed; final career revision changed only page 1, with pages 2-5 byte-identical PNGs to reviewed renders.",
+  "design_changes": "Sidebar repeated name replaced by PORTFOLIO at user request. No stylesheet, color, typography, or page-order changes."
 }

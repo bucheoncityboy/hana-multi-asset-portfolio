@@ -1,0 +1,110 @@
+{
+  "checked_at": "2026-10-22 Asia/Seoul",
+  "trading": {
+    "scope": "Read-only inspection of local application logs and Excel files. No broker API calls or real orders.",
+    "fill_log_files": 6,
+    "application_filled_order_rows": {
+      "BUY": 29,
+      "SELL": 1
+    },
+    "distinct_order_ids": 30,
+    "duplicate_order_id_rows": 0,
+    "excel_execution_table_matched_rows": 30,
+    "matched_fields": [
+      "symbol",
+      "side",
+      "status",
+      "filled_quantity",
+      "average_price",
+      "order_id",
+      "client_order_id"
+    ],
+    "excel_order_preview_buy_rows_marked_filled": 29,
+    "preview_quantity_matches_requested_rows": 29,
+    "preview_quantity_matches_actual_rows": 0,
+    "interpretation": "Preview qty is planned order quantity; actual quantities belong to the separate execution-results table. Amount-based BUY quantities differ from estimates.",
+    "execution_summary_order_posts": 29,
+    "execution_summary_state": "DONE",
+    "symbol_keyed_status_entries": 30,
+    "raw_broker_response_independently_verified": false,
+    "sell_29_verified": false,
+    "account_cashflow_pnl_reconciliation": false,
+    "private_data_published": false
+  },
+  "company_history": {
+    "historical_readme_commit": "fa47627a735816032631ff8f17b6281aadeb5a59",
+    "historical_readme_date": "2026-08-31",
+    "documented_coverage_names": [
+      "삼성전자",
+      "SK하이닉스",
+      "삼성SDI",
+      "현대모비스",
+      "기아",
+      "두산에너빌리티",
+      "대한전선",
+      "대한광통신",
+      "셀트리온",
+      "JYP엔터테인먼트",
+      "카카오",
+      "한미반도체",
+      "POSCO홀딩스",
+      "한화오션",
+      "LG전자",
+      "NH투자증권",
+      "한온시스템",
+      "LG CNS",
+      "NVIDIA"
+    ],
+    "documented_distinct_coverage_count": 19,
+    "implemented_or_successfully_analyzed_19_verified": false,
+    "public_samples_distinct_companies": 5,
+    "public_sample_scope": "Five companies in historical public artifacts; not the total number ever analyzed. Duplicate HTML/PDF copies are not additional companies.",
+    "doosan_celltrion_document_date": "2026-07-03",
+    "doosan_celltrion_version": "v3.0",
+    "samples_first_public_commit": "ec409eb60d65d8e7e67ac48f2b220c0c7d0f8529",
+    "samples_first_public_commit_date": "2026-07-10",
+    "current_version": "v3.2.0",
+    "current_19_ticker_registry_verified": false
+  },
+  "F141": {
+    "filter": {
+      "cohort": "long",
+      "policy": "primary",
+      "cost_bp": 5,
+      "months": 141
+    },
+    "annual_CER": {
+      "asset2_logistic": "2.11%",
+      "asset2_xgb": "2.69%",
+      "economic4_logistic": "6.62%",
+      "economic4_xgb": "5.90%",
+      "unconditional_mv": "4.69%",
+      "spy_ief_60_40": "7.00%"
+    },
+    "assets": [
+      "SPY",
+      "EFA",
+      "EEM",
+      "IEF",
+      "TLT",
+      "LQD",
+      "IYR",
+      "GLD"
+    ],
+    "cash": "BIL",
+    "start": "2014-01",
+    "end": "2025-09",
+    "cer_risk_aversion": 5,
+    "full_retraining_performed": false
+  },
+  "content_scope": "Allocation comparison, local trading/Excel verification scope, historical sample date/version, and user-requested career wording/sidebar identity edits. Other verified content, project order, colors, typography and layout retained.",
+  "profile_user_corrections": {
+    "career_label": "경력",
+    "experience_items": [
+      "실적 정산 및 보고서 작성",
+      "취업 콘텐츠 제작"
+    ],
+    "sidebar_identity": "PORTFOLIO",
+    "main_profile_name_preserved": true
+  }
+}

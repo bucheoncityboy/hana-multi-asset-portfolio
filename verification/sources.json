@@ -99,8 +99,43 @@
         "cohort": "long",
         "policy": "primary",
         "average_closing_risk_exposure": "0.7651077503178856"
+      },
+      {
+        "strategy": "spy_ief_60_40",
+        "cost_bp": "5",
+        "months": "141",
+        "annual_cer": "0.06995855380674841",
+        "cagr": "0.09112816598255558",
+        "annual_volatility": "0.09365403657831245",
+        "sharpe": "0.8084959492916739",
+        "max_drawdown": "-0.21062066259290457",
+        "annual_turnover_two_leg": "1.1398332625807974",
+        "average_risk_exposure": "1.0",
+        "annual_cost_fraction": "0.000569712231494188",
+        "daily_sharpe": "0.7409159487198619",
+        "cohort": "long",
+        "policy": "primary",
+        "average_closing_risk_exposure": "1.0"
+      },
+      {
+        "strategy": "unconditional_mv",
+        "cost_bp": "5",
+        "months": "141",
+        "annual_cer": "0.04688470460754555",
+        "cagr": "0.0545865036161588",
+        "annual_volatility": "0.056446687951256486",
+        "sharpe": "0.6890144209984231",
+        "max_drawdown": "-0.1394800005623209",
+        "annual_turnover_two_leg": "11.334876917995077",
+        "average_risk_exposure": "0.7412746980733498",
+        "annual_cost_fraction": "0.005667814027263649",
+        "daily_sharpe": "0.7076545026064478",
+        "cohort": "long",
+        "policy": "primary",
+        "average_closing_risk_exposure": "0.7412882264040437"
       }
-    ]
+    ],
+    "comparison_scope": "Same long/primary/5bp rows and 141-month evaluation. Strategies retain their own allocation rules. CER is not CAGR."
   },
   "pull_requests": [
     {
@@ -143,6 +178,6 @@
     "05_Trade"
   ],
   "workbook_scope": "Committed template has 6 sheets; current writer adds 06_Weekly_Trend for 7-sheet output. Code path inspected; not executed.",
-  "checked_at": "2026-10-21 Asia/Seoul",
+  "checked_at": "2026-10-22 Asia/Seoul",
   "research_rerun": false
 }
