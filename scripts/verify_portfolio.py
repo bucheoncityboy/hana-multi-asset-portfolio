@@ -38,7 +38,7 @@ for p in data['projects']:
         for value in p[k]:assert norm(value) in norm(flat) and norm(value) in norm(md),(p['id'],k)
 for url in h.links:
     if url.startswith('#'):assert url[1:] in h.ids,url
-    elif not url.startswith('http'):assert (root/'docs'/url).is_file(),url
+    elif not url.startswith('http'):assert (root/'docs'/url.split('?')[0]).is_file(),url
 from pypdf import PdfReader
 pdf=PdfReader(root/'docs/hana_multi_asset_portfolio.pdf')
 assert len(pdf.pages)==5

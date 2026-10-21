@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 import html
+import hashlib
 
 ROOT = Path(__file__).resolve().parent
 DATA = json.loads((ROOT / 'content.json').read_text(encoding='utf-8'))
@@ -9,6 +10,8 @@ PROFILE = DATA['profile']
 OUT = ROOT / 'docs'
 OUT.mkdir(exist_ok=True)
 esc = html.escape
+CSS_VERSION = hashlib.sha256((OUT/'styles.css').read_bytes()).hexdigest()[:12]
+JS_VERSION = hashlib.sha256((OUT/'app.js').read_bytes()).hexdigest()[:12]
 
 def lis(items):
     return '<ul>' + ''.join('<li>' + esc(x) + '</li>' for x in items) + '</ul>'
@@ -62,7 +65,7 @@ for p in DATA['projects']:
     </section>''')
 
 document = f'''<!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#006f6b"><title>김재원 | 하나자산운용 지원 포트폴리오</title><meta name="description" content="글로벌 ETF 자산배분, 시장 브리핑, 미국 대형주 운용자료 관리와 기업 리서치 지원 경험을 정리한 김재원의 포트폴리오입니다."><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#006f6b"><title>김재원 | 하나자산운용 지원 포트폴리오</title><meta name="description" content="글로벌 ETF 자산배분, 시장 브리핑, 미국 대형주 운용자료 관리와 기업 리서치 지원 경험을 정리한 김재원의 포트폴리오입니다."><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css?v={CSS_VERSION}"><script src="app.js?v={JS_VERSION}" defer></script></head>
 <body><a class="skip-link" href="#main">본문으로 이동</a><div class="reading-progress" aria-hidden="true"></div>
 <aside class="sidebar"><a href="#overview" class="identity"><span class="identity-label">지원 포트폴리오</span><strong>김재원<span class="identity-dot">.</span></strong><span class="identity-en">JAEWON KIM</span></a><nav aria-label="포트폴리오 목차">{nav}</nav><div class="sidebar-bottom"><p>GLOBAL MULTI-ASSET<br>RESEARCH &amp; OPERATIONS</p><div class="download-links"><a href="hana_multi_asset_portfolio.pdf" download>PDF 내려받기 ↓</a><a href="hana_multi_asset_portfolio.md" download>Markdown 원본 ↓</a></div></div></aside>
 <main id="main">{profile_page}
