@@ -263,8 +263,8 @@
       "repo": "https://github.com/bucheoncityboy/us-robust-live-ops",
       "links": [
         [
-          "Excel 원장 생성·7개 시트",
-          "https://github.com/bucheoncityboy/us-robust-live-ops/blob/main/ops/ops_excel_write.py"
+          "Excel 원장 샘플 보기",
+          "https://bucheoncityboy.github.io/hana-multi-asset-portfolio/ledger/"
         ],
         [
           "9개 결함 수정 기록",

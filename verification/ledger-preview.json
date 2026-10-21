@@ -1,0 +1,25 @@
+{
+  "source": "https://github.com/bucheoncityboy/us-robust-live-ops/blob/8e2163a0960d81a3284d8451d86729c65033559a/results/ops_excel/US_Robust_Ops_Template_v1.xlsx",
+  "source_commit": "8e2163a0960d81a3284d8451d86729c65033559a",
+  "sha256": "ecdf58b87b586c4056b8e59224ab58a62931f9b907ce2c9a04096db9d6817a6b",
+  "workbook": "docs/files/US_Robust_Ops_Template_v1.xlsx",
+  "preview": "docs/ledger/index.html",
+  "url": "https://bucheoncityboy.github.io/hana-multi-asset-portfolio/ledger/",
+  "sheets": [
+    "00_Config_Log",
+    "01_Portfolio_Now",
+    "02_Screen_Select",
+    "03_Results",
+    "04_Health",
+    "05_Trade"
+  ],
+  "nonempty_cells": {
+    "00_Config_Log": 200,
+    "01_Portfolio_Now": 94,
+    "02_Screen_Select": 304,
+    "03_Results": 199,
+    "04_Health": 126,
+    "05_Trade": 183
+  },
+  "scope": "Unchanged public template, 6 sheets; illustrative values, not live-account evidence. Current generator adds 06_Weekly_Trend as sheet 7. No private workbooks used."
+}

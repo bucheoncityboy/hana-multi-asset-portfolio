@@ -199,7 +199,7 @@ CER: 수익과 위험을 함께 반영한 지표. 월 순수익·위험회피계
 ### 관련 자료
 
 - [GitHub 저장소](https://github.com/bucheoncityboy/us-robust-live-ops)
-- [Excel 원장 생성·7개 시트](https://github.com/bucheoncityboy/us-robust-live-ops/blob/main/ops/ops_excel_write.py)
+- [Excel 원장 샘플 보기](https://bucheoncityboy.github.io/hana-multi-asset-portfolio/ledger/)
 - [9개 결함 수정 기록](https://github.com/bucheoncityboy/us-robust-live-ops/blob/main/docs/audit_fixes.md)
 - [주문 전 검증 코드](https://github.com/bucheoncityboy/us-robust-live-ops/blob/main/ops/ops_execute_gates.py)
 

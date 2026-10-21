@@ -68,6 +68,35 @@ if report_manifest.is_file():
     assert not any('/blob/' in str(uri) and str(uri).endswith('.html') for uri in annotations)
     report['readable_report_pdf_links']='PASS'
     report['report_pdf_count']=len(reports)
+ledger_manifest=root/'verification/ledger-preview.json'
+if ledger_manifest.is_file():
+    from openpyxl import load_workbook
+    item=json.loads(ledger_manifest.read_text(encoding='utf-8'))
+    path=root/item['workbook']
+    assert hashlib.sha256(path.read_bytes()).hexdigest()==item['sha256']
+    book=load_workbook(path,data_only=False)
+    assert book.sheetnames==item['sheets'] and not book._external_links
+    class Ledger(HTMLParser):
+        def __init__(self):super().__init__();self.sheets={};self.active=None;self.links=[]
+        def handle_starttag(self,t,a):
+            a=dict(a)
+            if t=='section':self.active=a['id'];self.sheets[self.active]={}
+            if t=='td' and self.active:self.sheets[self.active][a['data-cell']]=json.loads(a['data-raw'])
+            if t=='a':self.links.append(a['href'])
+        def handle_endtag(self,t):
+            if t=='section':self.active=None
+    ledger=Ledger();ledger.feed((root/item['preview']).read_text(encoding='utf-8'))
+    assert len(ledger.sheets)==len(book.sheetnames)==6
+    for i,sheet in enumerate(book):
+        expected={c.coordinate:c.value for row in sheet for c in row if c.value is not None}
+        actual={k:v for k,v in ledger.sheets[f'sheet-{i}'].items() if v is not None}
+        assert expected==actual,sheet.title
+    assert '../files/US_Robust_Ops_Template_v1.xlsx' in ledger.links
+    assert item['url'] in h.links and item['url'] in md and item['url'] in annotations
+    assert not any(str(uri).endswith('/ops_excel_write.py') for uri in annotations)
+    report['readable_ledger_sheets']='PASS'
+    report['public_template_sheets']=6
+    report['public_template_cells']=sum(item['nonempty_cells'].values())
 if args.links:
     def check(url):
         parts=url.removeprefix('https://github.com/').split('/')

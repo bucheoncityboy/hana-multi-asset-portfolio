@@ -9,6 +9,8 @@
 
 기업분석 페이지의 두 보고서 링크는 `docs/reports/`에 보관한 공개 구버전 PDF로 바로 연결합니다. GitHub의 HTML 소스 화면을 보고서 열람 링크로 사용하지 않습니다. 원본과 동일한 파일이며 출처·SHA-256은 `verification/report-links.json`에 기록합니다.
 
+운용 시스템의 원장 링크는 `docs/ledger/`에서 공개 Excel 템플릿의 6개 시트를 직접 보여 줍니다. 원본 XLSX 내려받기도 제공합니다. 예시 값과 실제 거래기록을 구분하며, 현재 생성 코드의 7번째 주간 추이 시트가 공개 템플릿에 포함된 것으로 표현하지 않습니다. 원본 출처와 SHA-256은 `verification/ledger-preview.json`에 기록합니다.
+
 ## 구성
 
 1. 프로필 및 핵심 역량
@@ -25,6 +27,8 @@ Python 3.10 이상을 사용합니다. 별도 웹 프레임워크나 외부 API 
 python build.py
 python -m http.server 8000 --directory docs
 ```
+
+원장 미리보기 재생성은 `pip install openpyxl` 후 `python scripts/build_ledger_preview.py`로 실행합니다. 기존 XLSX는 읽기 전용으로 사용하며 수정하지 않습니다.
 
 `content.json`이 콘텐츠의 단일 원본입니다. `build.py`는 `docs/index.html`과 루트·docs의 Markdown을 함께 생성합니다. Markdown을 직접 고치면 다음 빌드에서 덮어씁니다. `docs/styles.css`와 `docs/app.js`는 기존 보고서 레이아웃과 목차 기능을 유지합니다. 폰트는 시스템의 맑은 고딕·Apple SD Gothic Neo·Noto Sans KR 순으로 사용합니다.
 
